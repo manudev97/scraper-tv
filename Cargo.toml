@@ -1,0 +1,12 @@
+[package]
+name = "bot-scrapper"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+teloxide = { version = "0.12", features = ["macros", "auto-send"] }
+reqwest = { version = "0.11", features = ["json"] }
+scraper = "0.13"
+tokio = { version = "1.0", features = ["full", "macros"] }
+log = "0.4"
+pretty_env_logger = "0.4"
