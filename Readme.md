@@ -27,3 +27,80 @@ source ~/.bashrc
 
 # O usar .env
 echo "TELOXIDE_TOKEN=TU_TOKEN_AQUI" > .env
+
+## 🛠️ Instalación
+```bash
+pkg install git rust cargo
+git clone https://github.com/tu_usuario/tu_repositorio.git
+cd tu_repositorio
+cargo run --release
+```
+
+## 🎮 Uso
+```
+/start - Muestra ayuda
+/check [patrón] - Inicia escaneo
+
+📌 Ejemplos:
+/check lb[A]-lb[Z] → lbA, lbB,..., lbZ
+/check [a]xx-[d]xx → axx, bxx, cxx, dxx
+```
+
+## 📦 Dependencias
+- Rust 1.60+
+- Cargo
+- Termux API (opcional para portapapeles)
+
+
+🔍 **Resumen del Proyecto: Telegram Scraper Bot**  
+
+### 🧩 **Componentes Clave**  
+1. **Patrones Dinámicos**:  
+   - Sintaxis: `/check [A]xxx-[Z]xxx` → Genera URLs secuenciales (ej: `Axxx`, `Bxxx`, ..., `Zxxx`).  
+   - Soporta mayúsculas/minúsculas y múltiples variables por patrón.  
+
+2. **Filtro Inteligente**:  
+   - Ignora contenido genérico (ej: títulos predeterminados).  
+   - Notifica solo hallazgos relevantes.  
+
+3. **Configuración Flexible**:  
+   - Delay ajustable entre requests (2s por defecto).  
+   - Token de bot gestionado por variables de entorno.  
+
+### 🛠️ **Tecnologías**  
+- **Rust**: Rendimiento y seguridad nativa.  
+- **Teloxide**: Framework para bots de Telegram.  
+- **Scraper**: Extracción eficiente de datos HTML.  
+- **Termux**: Ejecución en dispositivos Android.  
+
+### ⚡ **Cómo Funciona**  
+1. **Parseo de Comando**:  
+   - El usuario envía `/check lb[A]-lb[Z]`.  
+   - El bot identifica el rango `A-Z` y plantilla `lb{}`.  
+
+2. **Generación de URLs**:  
+   - Crea secuencia: `lbA`, `lbB`, ..., `lbZ`.  
+
+3. **Scraping y Filtrado**:  
+   - Obtiene títulos de cada URL.  
+   - Compara contra lista negra de contenido no deseado.  
+
+4. **Notificaciones**:  
+   - Envia mensajes solo con resultados válidos.  
+
+### 📈 **Ventajas**  
+- **Portabilidad**: Funciona en Android via Termux.  
+- **Eficiencia**: Bajo consumo de recursos.  
+- **Extensible**: Fácil adaptación a nuevos sitios web.  
+
+### 🚀 **Casos de Uso**  
+- Detección de nuevos episodios en plataformas de streaming.  
+- Monitoreo de disponibilidad de productos en e-commerce.  
+- Rastreo de actualizaciones en sitios de noticias.  
+
+### 📌 **Requisitos**  
+- Token de bot de Telegram (obtenido via @BotFather).  
+- Rust 1.60+ y Cargo (gestor de paquetes).  
+- Conexión a internet estable.  
+
+**¡Un proyecto perfecto para entusiastas de la automatización y scraping!** 🚀
