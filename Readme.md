@@ -9,6 +9,17 @@ Un bot avanzado para escanear páginas web con patrones personalizados y notific
 - 📨 Notificaciones en tiempo real
 - 🔄 Fácil despliegue en Termux
 
+## 🎬 Integración con YTS
+### Características de la integración YTS
+- Monitoreo Automático : Verifica cada 3 minutos las nuevas películas en YTS.
+- Notificaciones con Imágenes : Envía la portada de la película junto con la información.
+- Enlaces Magnet : Genera automáticamente enlaces magnet para descarga directa.
+- Múltiples Calidades : Muestra información sobre la calidad disponible de cada película.
+- Sistema de Suscripción : Permite a los usuarios suscribirse/desuscribirse de las notificaciones.
+### Comandos YTS
+- /yts_init : Suscribe el chat actual a las notificaciones de nuevas películas y activa el monitor si no está en ejecución.
+- /yts_stop : Cancela la suscripción del chat a las notificaciones de YTS.
+
 ## ⚙️ Configuración
 
 ### 1. Obtener Token de BotFather
